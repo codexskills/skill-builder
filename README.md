@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <b>StackForge by Codex Skiller — OpenCode AI Project Blueprint Generator</b>
+  <b>StackForge by Codex Skiller — AI Project Blueprint Generator</b>
   <br/>
-  <i>Stack Selection · Architecture · Database Design · Roadmap · Deployment</i>
+  <i>Works with OpenCode · Claude Code · Codex · Cursor · ChatGPT · Windsurf · Gemini CLI</i>
 </p>
 
 <p align="center">
@@ -18,137 +18,223 @@
   <a href="https://github.com/codexskills/skill-builder/releases">
     <img src="https://img.shields.io/github/v/release/codexskills/skill-builder?style=flat-square&logo=git&color=00dd75" alt="Version"/>
   </a>
-  <a href="https://github.com/codexskills">
-    <img src="https://img.shields.io/badge/AI-Agent_Skill-00ff88?style=flat-square&logo=openai" alt="Agent Skill"/>
-  </a>
-  <a href="https://opencode.ai/docs/skills/">
-    <img src="https://img.shields.io/badge/OpenCode-Compatible-00ff88?style=flat-square" alt="OpenCode"/>
-  </a>
-</p>
-
-<p align="center">
-  <a href="#installation">Installation</a> ·
-  <a href="#usage">Usage</a> ·
-  <a href="#project-types">Project Types</a> ·
-  <a href="#whats-new">Changelog</a> ·
-  <a href="https://codexskills.github.io">Portfolio</a> ·
-  <a href="https://t.me/REXXT_H4RE">Telegram</a>
+  <img src="https://img.shields.io/badge/OpenCode-✓-00ff88?style=flat-square" alt="OpenCode"/>
+  <img src="https://img.shields.io/badge/Claude_Code-✓-00ff88?style=flat-square" alt="Claude Code"/>
+  <img src="https://img.shields.io/badge/Codex-✓-00ff88?style=flat-square" alt="Codex"/>
+  <img src="https://img.shields.io/badge/Cursor-✓-00ff88?style=flat-square" alt="Cursor"/>
+  <img src="https://img.shields.io/badge/ChatGPT-✓-00ff88?style=flat-square" alt="ChatGPT"/>
+  <img src="https://img.shields.io/badge/Windsurf-✓-00ff88?style=flat-square" alt="Windsurf"/>
 </p>
 
 ---
 
 ## What is StackForge?
 
-StackForge by **Codex Skiller** is an **AI agent skill** for OpenCode, Claude Code, Codex, and Cursor that transforms software ideas into **production-ready project blueprints**. When you say *"I want to build X"*, it generates a complete blueprint with:
+StackForge is an **AI agent skill (SKILL.md)** that transforms software ideas into production-ready project blueprints. Works with any AI coding assistant that supports SKILL.md or custom instructions.
 
-- **Tech Stack** — Curated technology choices with justifications and alternatives
-- **Folder Structure** — Copy-paste ready directory tree with annotations
-- **Database Design** — Column-level schema, indexes, relationships, migration strategy
-- **System Architecture** — ASCII diagrams, data flow, auth flow, background jobs
-- **Development Roadmap** — 2-6 phased phases with milestones and concrete steps
-- **Deployment Guide** — Platform-specific commands from local to production
-- **Testing Strategy** — Unit, integration, E2E tooling with CI integration
-- **Security & Monitoring** — Auth, rate limiting, error tracking, uptime monitoring
-- **Cost Breakdown** — Monthly hosting estimates with free tier limits
-- **Risk Mitigation** — Top risks with prevention strategies
+When you say *"I want to build X"*, it generates a complete blueprint with:
 
-### Supported Platforms
-
-| Platform | Status |
-|----------|--------|
-| OpenCode | Native support |
-| Claude Code | Full support |
-| Codex | Full support |
-| Cursor | Full support |
-| Gemini CLI | Full support |
-| Windsurf | Compatible |
+- **Tech Stack** — curated choices with justifications and alternatives
+- **Folder Structure** — copy-paste ready directory tree
+- **Database Design** — column-level schema, indexes, relationships
+- **System Architecture** — ASCII diagrams, data flow, auth flow
+- **Development Roadmap** — phased timeline with milestones
+- **Deployment Guide** — platform-specific commands
+- **Testing Strategy** — unit, integration, E2E with CI integration
+- **Security & Monitoring** — auth, rate limiting, error tracking
+- **Cost Breakdown** — monthly hosting estimates with free tier limits
+- **Risk Mitigation** — top risks with prevention strategies
 
 ---
 
-## Installation
+## Install StackForge on ANY AI Agent
 
-### One-Line Install
+### OpenCode
 
 ```bash
-# OpenCode / Claude Code / Codex
-curl -sSL https://raw.githubusercontent.com/codexskills/skill-builder/main/install.sh | bash
+# Global install (all projects)
+mkdir -p ~/.config/opencode/skills
+git clone https://github.com/codexskills/skill-builder.git
+cp -r skill-builder ~/.config/opencode/skills/stackforge
+
+# Or project-level install
+cp -r skill-builder .opencode/skills/stackforge
 ```
 
-### Manual Install
+Restart OpenCode. The skill loads automatically when you say "build me X" or "design my project".
+
+---
+
+### Claude Code (Anthropic)
 
 ```bash
-# Clone the repo
+# Global install (all projects)
+mkdir -p ~/.claude/skills
+git clone https://github.com/codexskills/skill-builder.git
+cp -r skill-builder ~/.claude/skills/stackforge
+
+# Or project-level install
+cp -r skill-builder .claude/skills/stackforge
+```
+
+Restart Claude Code. Say "I want to build a Telegram bot" to trigger StackForge.
+
+---
+
+### Codex (OpenAI)
+
+```bash
+# Install to Codex skills directory
+mkdir -p ~/.codex/skills
+git clone https://github.com/codexskills/skill-builder.git
+cp -r skill-builder ~/.codex/skills/stackforge
+```
+
+Or add to your project:
+```bash
+cp -r skill-builder .agents/skills/stackforge
+```
+
+StackForge auto-detects when you describe a project idea.
+
+---
+
+### Cursor
+
+```bash
+# Install as Cursor rule
+mkdir -p .cursor/rules
+cp skill-builder/SKILL.md .cursor/rules/stackforge.mdc
+```
+
+Or add to Cursor's rules directory:
+```bash
+mkdir -p ~/.cursor/rules
+cp skill-builder/SKILL.md ~/.cursor/rules/stackforge.mdc
+```
+
+---
+
+### ChatGPT (Custom GPT / Projects)
+
+1. Open ChatGPT
+2. Go to **Explore GPTs** → **Create a GPT** (or **Projects** → **Add instructions**)
+3. In the **Instructions** field, paste the entire content of `SKILL.md`
+4. Save as "StackForge" or "Project Blueprint Generator"
+
+Now when you describe a project idea, ChatGPT will generate blueprints using StackForge's framework.
+
+---
+
+### Windsurf
+
+```bash
+# Add to Windsurf rules
+cp skill-builder/SKILL.md .windsurfrules
+```
+
+---
+
+### Gemini CLI (Google)
+
+```bash
+# Install to Gemini CLI skills
+mkdir -p ~/.gemini/skills
+git clone https://github.com/codexskills/skill-builder.git
+cp -r skill-builder ~/.gemini/skills/stackforge
+```
+
+---
+
+### Claude.ai (Web)
+
+1. Open [claude.ai](https://claude.ai)
+2. Create a new **Project**
+3. Go to **Project Settings** → **Knowledge**
+4. Upload or paste the content of `SKILL.md`
+5. Also paste the relevant reference files from `references/` folder
+
+---
+
+### Any Other AI Agent
+
+Most AI agents support one of these methods:
+- **SKILL.md folder**: Copy `skill-builder/` folder to `~/.config/opencode/skills/stackforge/` or the agent's equivalent skills directory
+- **Custom instructions**: Paste the content of `SKILL.md` into the agent's system prompt or instructions field
+- **Project knowledge**: Upload `SKILL.md` and reference files as project knowledge documents
+
+---
+
+## Quick Install (all platforms)
+
+```bash
 git clone https://github.com/codexskills/skill-builder.git
 cd skill-builder
 
-# Copy to OpenCode global skills
-cp -r . /data/data/com.termux/files/home/.config/opencode/skills/stackforge
+# Install to all supported platforms at once
+cp -r . ~/.config/opencode/skills/stackforge 2>/dev/null
+cp -r . ~/.claude/skills/stackforge 2>/dev/null
+cp -r . ~/.codex/skills/stackforge 2>/dev/null
+cp -r . ~/.gemini/skills/stackforge 2>/dev/null
+cp SKILL.md ~/.cursor/rules/stackforge.mdc 2>/dev/null
+cp SKILL.md .windsurfrules 2>/dev/null
 
-# Or symlink for auto-updates
-ln -s $(pwd) /data/data/com.termux/files/home/.config/opencode/skills/stackforge
-```
-
-### Project-Level Install
-
-```bash
-# Copy to your project's local skills
-cp -r stackforge .opencode/skills/stackforge
+echo "StackForge installed!"
 ```
 
 ---
 
-## Usage
+## How to Use
 
-Trigger StackForge by saying any of these to your AI coding agent:
+StackForge activates when you say any of these to your AI agent:
 
-| Trigger Phrase | Action |
-|----------------|--------|
-| "I want to build X" | Full blueprint generated |
-| "Build me X" | Full blueprint generated |
+| Say This | What Happens |
+|----------|--------------|
+| "I want to build X" | Full project blueprint |
+| "Build me a Telegram bot" | Bot-specific blueprint |
+| "Design a SaaS dashboard" | Web app blueprint |
 | "What stack should I use for X" | Stack recommendation |
-| "Give me a project blueprint for X" | Full blueprint |
-| "How do I architect X" | Architecture + design |
 | "Plan my project X" | Requirements + roadmap |
-| "Design my project" | Full blueprint |
+| "Architect an AI chatbot" | AI system architecture |
+| "Help me create a mobile app" | Mobile app blueprint |
 
-### Example Output
+### Example
 
-> **User**: *"Build a Telegram bot for restaurant food ordering"*
+> **You**: *"Build a Telegram bot for restaurant food ordering"*
 >
-> **StackForge** outputs:
-> - **Stack**: Python 3.12 + python-telegram-bot + PostgreSQL + Redis + Railway
-> - **Database**: 7 tables (users, restaurants, menu_items, orders, order_items, payments, reviews) with indexes and foreign keys
-> - **Architecture**: Webhook handler → Message queue → Order processor → Payment gateway
-> - **Roadmap**: 6-phase, 6-week development timeline
-> - **Deployment**: Local dev → Staging → Production with Railway CLI commands
-> - **Appendices**: Testing strategy, cost breakdown ($5-15/mo), security audit, risk matrix
+> **StackForge outputs**:
+> - Stack: Python 3.12 + python-telegram-bot + PostgreSQL + Redis
+> - Database: 7 tables with indexes and foreign keys
+> - Architecture: Webhook → Queue → Processor → Payment
+> - Roadmap: 6 phases over 6 weeks
+> - Cost: $5-15/month on Railway free tier
 
 ---
 
 ## Project Types
 
-| # | Type | Reference File | When to Use |
-|---|------|---------------|-------------|
-| 1 | Web Application | [references/webapp.md](references/webapp.md) | SaaS, dashboard, e-commerce, landing page |
-| 2 | Bot | [references/bot.md](references/bot.md) | Telegram, Discord, Slack bots, automation |
-| 3 | API / Backend | [references/api.md](references/api.md) | REST, GraphQL, microservices, backend |
-| 4 | Mobile App | [references/mobile.md](references/mobile.md) | iOS, Android, cross-platform apps |
-| 5 | AI System | [references/ai.md](references/ai.md) | RAG, LLM chatbot, AI agent, ML pipeline |
-| 6 | CLI Tool | [references/cli.md](references/cli.md) | Command-line apps, dev tools, scripts |
-| 7 | Static Site | General knowledge | Blog, docs, portfolio, marketing site |
-| 8 | Browser Extension | General knowledge | Chrome, Firefox, Edge addons |
-| 9 | Desktop App | General knowledge | Tauri, Electron, native apps |
+| Type | Examples |
+|------|----------|
+| Web Application | SaaS, dashboard, e-commerce, landing page |
+| Bot | Telegram, Discord, Slack bots, automation |
+| API / Backend | REST, GraphQL, microservices |
+| Mobile App | React Native, Flutter, SwiftUI |
+| AI System | RAG, LLM chatbot, AI agent, ML pipeline |
+| CLI Tool | Command-line apps, dev tools, scripts |
+| Static Site | Blog, docs, portfolio |
+| Browser Extension | Chrome, Firefox, Edge addons |
+| Desktop App | Tauri, Electron, native |
 
 ---
 
 ## Repository Structure
 
 ```
-stackforge/
+skill-builder/
 ├── SKILL.md                  # Main skill file (agent instructions)
 ├── README.md                 # This file
-├── install.sh                # One-line installer script
-├── references/               # Stack reference files by type
+├── install.sh                # One-line installer
+├── references/               # Stack references by type
 │   ├── webapp.md
 │   ├── bot.md
 │   ├── api.md
@@ -166,32 +252,19 @@ stackforge/
 
 ## What's New in v1.1.0
 
-- **9 project types** — Static Site, Browser Extension, Desktop App added
-- **Smarter input handling** — POC vs Production, existing stack, migration mode
-- **Critical validation checks** — Security, auth, monitoring, backup guardrails
-- **Richer blueprints** — Testing Strategy, Cost Breakdown, Risk Matrix, Alternatives
-- **Conversation flow** — Guided input with edge case handling
-- **Cost-aware recommendations** — Free tier limits and scaling warnings
-- **Collaboration triggers** — Delegation to security, CI/CD, API design skills
-
----
-
-## Compatibility
-
-- [OpenCode](https://opencode.ai) — Full native support
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) — Full support
-- [Codex](https://github.com/openai/codex) — Full support
-- [Cursor](https://cursor.sh) — Full support
-- [Gemini CLI](https://cloud.google.com/vertex-ai/generative-ai/docs/gemini-cli) — Compatible
-- [Windsurf](https://codeium.com/windsurf) — Compatible
+- 9 project types supported
+- Smarter input handling (POC, migration, existing stack)
+- Critical validation checks (security, auth, monitoring)
+- Testing strategy, cost breakdown, risk matrix
+- Guided conversation flow
+- Cost-aware recommendations with free tier limits
+- Collaboration triggers (delegation to other skills)
 
 ---
 
 ## Search Keywords
 
-StackForge Agent Skill — the original OpenCode AI agent skill for project blueprint generation. Different from other StackForge projects (OpenStack mirrors, full-stack templates, Rust networking libraries, Python billing software, or serverless stacks).
-
-Builds: website builder, web app builder, SaaS builder, dashboard builder, landing page builder, e-commerce builder, portfolio builder, blog builder, Telegram bot builder, Discord bot builder, Slack bot builder, automation bot builder, AI agent builder, agent skill builder, LLM chatbot builder, RAG pipeline builder, AI system builder, API builder, backend builder, REST API builder, GraphQL builder, microservices builder, mobile app builder, iOS app builder, Android app builder, React Native builder, Flutter builder, SwiftUI builder, CLI tool builder, command-line tool builder, dev tool builder, script builder, static site builder, docs builder, browser extension builder, Chrome extension builder, Firefox addon builder, desktop app builder, Electron builder, Tauri builder, native app builder, project planner, software architect, solution architect, system architect, technical planner, tech stack selector, database designer, schema designer, deployment planner, CI/CD planner, MVP builder, prototype builder, production planner, full-stack planner, backend planner, frontend planner, code generator, blueprint generator, project scaffold, OpenCode skill, Claude Code skill, Codex skill, Cursor skill, AI coding assistant, project planning tool, architecture designer, system designer, roadmap planner, open source planner, startup builder, indie hacker tool, dev tool, software planner.
+StackForge Agent Skill — AI project blueprint generator for all coding assistants. Works with OpenCode, Claude Code, Codex, Cursor, ChatGPT, Windsurf, Gemini CLI. Builds: website builder, Telegram bot builder, Discord bot builder, AI agent builder, chatbot builder, RAG pipeline builder, API builder, backend builder, mobile app builder, CLI tool builder, SaaS builder, e-commerce builder, project planner, software architect, system architect, tech stack selector, database designer, deployment planner, MVP builder, full-stack planner, startup builder, indie hacker tool.
 
 ---
 
@@ -201,12 +274,12 @@ Builds: website builder, web app builder, SaaS builder, dashboard builder, landi
   <a href="https://t.me/REXXT_H4RE">
     <img src="https://img.shields.io/badge/Telegram-@REXXT_H4RE-0088cc?style=flat-square&logo=telegram" alt="Telegram"/>
   </a>
-  <b>Channel:</b> <code>codex_update</code> — Release notes, stack updates, project showcases
+  <b>Channel:</b> <code>codex_update</code>
 </p>
 
 ---
 
 <p align="center">
   Built by <a href="https://github.com/codexskills">Codex Skiller</a><br/>
-  <a href="https://codexskills.github.io">codexskills.github.io</a> &middot; <a href="https://t.me/REXXT_H4RE">@REXXT_H4RE</a>
+  <a href="https://codexskills.github.io">codexskills.github.io</a>
 </p>
