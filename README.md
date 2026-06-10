@@ -187,6 +187,12 @@ stackforge/
 
 ---
 
+## Search Keywords
+
+StackForge helps build: website builder, web app builder, SaaS builder, dashboard builder, landing page builder, e-commerce builder, portfolio builder, blog builder, Telegram bot builder, Discord bot builder, Slack bot builder, automation bot builder, AI agent builder, agent skill builder, LLM chatbot builder, RAG pipeline builder, AI system builder, API builder, backend builder, REST API builder, GraphQL builder, microservices builder, mobile app builder, iOS app builder, Android app builder, React Native builder, Flutter builder, SwiftUI builder, CLI tool builder, command-line tool builder, dev tool builder, script builder, static site builder, docs builder, browser extension builder, Chrome extension builder, Firefox addon builder, desktop app builder, Electron builder, Tauri builder, native app builder, project planner, software architect, solution architect, system architect, technical planner, tech stack selector, database designer, schema designer, deployment planner, CI/CD planner, MVP builder, prototype builder, production planner, full-stack planner, backend planner, frontend planner, code generator, blueprint generator, project scaffold, OpenCode skill, Claude Code skill, Codex skill, Cursor skill, AI coding assistant, project planning tool, architecture designer, system designer, roadmap planner, open source planner, startup builder, indie hacker tool, dev tool, software planner.
+
+---
+
 ## Stay Updated
 
 <p>

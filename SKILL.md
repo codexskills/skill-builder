@@ -1,6 +1,6 @@
 ---
 name: stackforge
-description: OpenCode AI agent skill for project blueprint generation, Telegram bot builder, and AI agent builder. Generates production-ready blueprints with stack selection, architecture, database design, roadmap, and deployment for 9 project types including web apps, Telegram/Discord bots, APIs, mobile apps, AI agents, and CLI tools.
+description: OpenCode AI agent skill for project blueprint generation, website builder, Telegram/Discord bot builder, AI agent builder, SaaS builder, API builder, mobile app builder, CLI tool builder, and chatbot builder. Generates production-ready blueprints with stack selection, architecture, database design, roadmap, and deployment for 9 project types.
 risk: medium
 date_added: 2026-06-10
 version: 1.1.0
