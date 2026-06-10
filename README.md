@@ -234,6 +234,8 @@ skill-builder/
 ├── SKILL.md                  # Main skill file (agent instructions)
 ├── README.md                 # This file
 ├── install.sh                # One-line installer
+├── tests/
+│   └── TESTING.md            # Test prompts for all 9 project types
 ├── references/               # Stack references by type
 │   ├── webapp.md
 │   ├── bot.md
