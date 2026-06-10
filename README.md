@@ -78,8 +78,8 @@ curl -sSL https://raw.githubusercontent.com/stackforgeh/stackforge/main/install.
 
 ```bash
 # Clone the repo
-git clone https://github.com/stackforgeh/stackforge.git
-cd stackforge
+git clone https://github.com/stackforgeh/stackforge-agent-skill.git
+cd stackforge-agent-skill
 
 # Copy to OpenCode global skills
 cp -r . /data/data/com.termux/files/home/.config/opencode/skills/stackforge

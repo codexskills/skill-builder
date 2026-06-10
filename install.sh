@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="https://github.com/stackforgeh/stackforge.git"
+REPO="https://github.com/stackforgeh/stackforge-agent-skill.git"
 DEST="${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills/stackforge"
 
 echo "Installing StackForge to $DEST"
