@@ -1,106 +1,204 @@
-# StackForge v1.1.0
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff88&height=160&section=header&text=StackForge&fontSize=60&fontColor=ffffff&fontAlignY=35&animation=fadeIn" width="100%"/>
+</p>
 
-Full project blueprint generator agent skill. When a user wants to build any software project, StackForge produces a production-ready blueprint covering tech stack, folder structure, database design, system architecture, development roadmap, and deployment.
+<p align="center">
+  <b>OpenCode Agent Skill — Production-Ready Project Blueprint Generator</b>
+  <br/>
+  <i>Stack Selection · Architecture · Database Design · Roadmap · Deployment</i>
+</p>
 
-## Installation
+<p align="center">
+  <a href="https://github.com/stackforgeh/stackforge/stargazers">
+    <img src="https://img.shields.io/github/stars/stackforgeh/stackforge?style=flat-square&logo=github&color=00ff88" alt="Stars"/>
+  </a>
+  <a href="https://github.com/stackforgeh/stackforge/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/stackforgeh/stackforge?style=flat-square&color=00ff88" alt="License"/>
+  </a>
+  <a href="https://github.com/stackforgeh/stackforge/releases">
+    <img src="https://img.shields.io/github/v/release/stackforgeh/stackforge?style=flat-square&logo=git&color=00dd75" alt="Version"/>
+  </a>
+  <a href="https://github.com/stackforgeh">
+    <img src="https://img.shields.io/badge/AI-Agent_Skill-00ff88?style=flat-square&logo=openai" alt="Agent Skill"/>
+  </a>
+  <a href="https://opencode.ai/docs/skills/">
+    <img src="https://img.shields.io/badge/OpenCode-Compatible-00ff88?style=flat-square" alt="OpenCode"/>
+  </a>
+</p>
 
-Copy the `stackforge/` directory to your skills directory:
+<p align="center">
+  <a href="#installation">Installation</a> ·
+  <a href="#usage">Usage</a> ·
+  <a href="#project-types">Project Types</a> ·
+  <a href="#whats-new">Changelog</a> ·
+  <a href="https://stackforgeh.github.io">Portfolio</a> ·
+  <a href="https://t.me/REXXT_H4RE">Telegram</a>
+</p>
 
-```bash
-# OpenCode / Claude Code
-cp -r stackforge /path/to/skills/
+---
 
-# Or symlink
-ln -s $(pwd)/stackforge /data/data/com.termux/files/home/.config/opencode/skills/stackforge
-```
+## What is StackForge?
 
-## Usage
+StackForge is an **AI agent skill** for OpenCode, Claude Code, Codex, and Cursor that transforms software ideas into **production-ready project blueprints**. When you say *"I want to build X"*, it generates a complete blueprint with:
 
-Trigger the skill by saying any of:
+- **Tech Stack** — Curated technology choices with justifications and alternatives
+- **Folder Structure** — Copy-paste ready directory tree with annotations
+- **Database Design** — Column-level schema, indexes, relationships, migration strategy
+- **System Architecture** — ASCII diagrams, data flow, auth flow, background jobs
+- **Development Roadmap** — 2-6 phased phases with milestones and concrete steps
+- **Deployment Guide** — Platform-specific commands from local to production
+- **Testing Strategy** — Unit, integration, E2E tooling with CI integration
+- **Security & Monitoring** — Auth, rate limiting, error tracking, uptime monitoring
+- **Cost Breakdown** — Monthly hosting estimates with free tier limits
+- **Risk Mitigation** — Top risks with prevention strategies
 
-- `"I want to build X"` / `"Build me X"`
-- `"Help me create X"`
-- `"What stack should I use for X"`
-- `"Give me a project blueprint for X"`
-- `"How do I architect X"`
-- `"Design my project"` / `"Plan my project"`
-
-### Example
-
-> **User**: "Build a Telegram bot for restaurant food ordering"
->
-> **StackForge** produces a blueprint with:
-> - Python + python-telegram-bot + PostgreSQL + Redis + Railway
-> - 7 database tables (users, restaurants, menu_items, orders, order_items, payments)
-> - 6-phase development roadmap (6 weeks)
-> - Deployment commands for Local → Staging → Production
-> - Testing strategy, security considerations, cost breakdown, risk mitigation
-> - Best practices for payments, rate limiting, and webhook handling
-
-## Project Types Supported
-
-| Type | Reference File |
-|------|---------------|
-| Web App (SaaS, dashboard, landing page) | `references/webapp.md` |
-| Bot (Telegram, Discord, Slack) | `references/bot.md` |
-| API / Backend / Microservices | `references/api.md` |
-| Mobile App (iOS, Android) | `references/mobile.md` |
-| AI System (RAG, LLM, agents) | `references/ai.md` |
-| CLI Tool / Script | `references/cli.md` |
-| Static Site, Browser Extension, Desktop App | General knowledge (no dedicated ref) |
-
-## What's New in v1.1.0
-
-- **More project types**: Static Site, Browser Extension, Desktop App detection
-- **Smarter input handling**: POC vs Production, existing stack, migration mode
-- **Critical validation checks**: Built-in guardrails for security, auth, monitoring
-- **Richer blueprints**: Optional Testing Strategy, Cost Breakdown, Risks & Mitigations, Alternatives Considered
-- **Conversation flow**: Guided input collection with edge case handling
-- **Cost-aware recommendations**: Free tier limits and scaling warnings per stack
-- **Collaboration triggers**: Delegation paths to other skills (security, CI/CD, API design)
-
-## Output
-
-Core 10 sections + optional appendices:
-
-1. Project Summary
-2. Core Requirements (with P0/P1 priority)
-3. Recommended Tech Stack (with justifications + version numbers)
-4. Folder Structure (copy-paste ready)
-5. Database Design (column-level detail with indexes)
-6. System Architecture (ASCII diagram + data flow)
-7. Development Roadmap (phased with milestones)
-8. Deployment Guide (commands for Local → Staging → Production)
-9. GitHub Repository Structure (branch strategy per team size)
-10. Best Practices & Warnings (security, performance, scaling)
-
-**Optional Appendices**: Testing Strategy, Cost Breakdown, Risks & Mitigations, Alternatives Considered
-
-## Compatibility
+### Supported Platforms
 
 | Platform | Status |
 |----------|--------|
-| Claude Code | ✅ |
-| OpenCode | ✅ |
-| Gemini CLI | ✅ |
-| Codex | ✅ |
+| OpenCode | Native support |
+| Claude Code | Full support |
+| Codex | Full support |
+| Cursor | Full support |
+| Gemini CLI | Full support |
+| Windsurf | Compatible |
 
-## File Structure
+---
+
+## Installation
+
+### One-Line Install
+
+```bash
+# OpenCode / Claude Code / Codex
+curl -sSL https://raw.githubusercontent.com/stackforgeh/stackforge/main/install.sh | bash
+```
+
+### Manual Install
+
+```bash
+# Clone the repo
+git clone https://github.com/stackforgeh/stackforge.git
+cd stackforge
+
+# Copy to OpenCode global skills
+cp -r . /data/data/com.termux/files/home/.config/opencode/skills/stackforge
+
+# Or symlink for auto-updates
+ln -s $(pwd) /data/data/com.termux/files/home/.config/opencode/skills/stackforge
+```
+
+### Project-Level Install
+
+```bash
+# Copy to your project's local skills
+cp -r stackforge .opencode/skills/stackforge
+```
+
+---
+
+## Usage
+
+Trigger StackForge by saying any of these to your AI coding agent:
+
+| Trigger Phrase | Action |
+|----------------|--------|
+| "I want to build X" | Full blueprint generated |
+| "Build me X" | Full blueprint generated |
+| "What stack should I use for X" | Stack recommendation |
+| "Give me a project blueprint for X" | Full blueprint |
+| "How do I architect X" | Architecture + design |
+| "Plan my project X" | Requirements + roadmap |
+| "Design my project" | Full blueprint |
+
+### Example Output
+
+> **User**: *"Build a Telegram bot for restaurant food ordering"*
+>
+> **StackForge** outputs:
+> - **Stack**: Python 3.12 + python-telegram-bot + PostgreSQL + Redis + Railway
+> - **Database**: 7 tables (users, restaurants, menu_items, orders, order_items, payments, reviews) with indexes and foreign keys
+> - **Architecture**: Webhook handler → Message queue → Order processor → Payment gateway
+> - **Roadmap**: 6-phase, 6-week development timeline
+> - **Deployment**: Local dev → Staging → Production with Railway CLI commands
+> - **Appendices**: Testing strategy, cost breakdown ($5-15/mo), security audit, risk matrix
+
+---
+
+## Project Types
+
+| # | Type | Reference File | When to Use |
+|---|------|---------------|-------------|
+| 1 | Web Application | [references/webapp.md](references/webapp.md) | SaaS, dashboard, e-commerce, landing page |
+| 2 | Bot | [references/bot.md](references/bot.md) | Telegram, Discord, Slack bots, automation |
+| 3 | API / Backend | [references/api.md](references/api.md) | REST, GraphQL, microservices, backend |
+| 4 | Mobile App | [references/mobile.md](references/mobile.md) | iOS, Android, cross-platform apps |
+| 5 | AI System | [references/ai.md](references/ai.md) | RAG, LLM chatbot, AI agent, ML pipeline |
+| 6 | CLI Tool | [references/cli.md](references/cli.md) | Command-line apps, dev tools, scripts |
+| 7 | Static Site | General knowledge | Blog, docs, portfolio, marketing site |
+| 8 | Browser Extension | General knowledge | Chrome, Firefox, Edge addons |
+| 9 | Desktop App | General knowledge | Tauri, Electron, native apps |
+
+---
+
+## Repository Structure
 
 ```
 stackforge/
-├── SKILL.md                  # Main skill file (v1.1.0)
+├── SKILL.md                  # Main skill file (agent instructions)
 ├── README.md                 # This file
-├── references/
-│   ├── webapp.md             # Stack details for web apps
-│   ├── bot.md                # Stack details for bots
-│   ├── api.md                # Stack details for APIs
-│   ├── mobile.md             # Stack details for mobile
-│   ├── ai.md                 # Stack details for AI systems
-│   └── cli.md                # Stack details for CLI tools
-├── examples/
-│   ├── telegram-bot.md       # Sample: Telegram food ordering bot
-│   └── saas-platform.md      # Sample: SaaS analytics dashboard
+├── install.sh                # One-line installer script
+├── references/               # Stack reference files by type
+│   ├── webapp.md
+│   ├── bot.md
+│   ├── api.md
+│   ├── mobile.md
+│   ├── ai.md
+│   └── cli.md
+├── examples/                 # Full blueprint examples
+│   ├── telegram-bot.md
+│   └── saas-platform.md
 └── templates/
-    └── blueprint.md          # Blueprint template with all sections
+    └── blueprint.md          # Blueprint template
 ```
+
+---
+
+## What's New in v1.1.0
+
+- **9 project types** — Static Site, Browser Extension, Desktop App added
+- **Smarter input handling** — POC vs Production, existing stack, migration mode
+- **Critical validation checks** — Security, auth, monitoring, backup guardrails
+- **Richer blueprints** — Testing Strategy, Cost Breakdown, Risk Matrix, Alternatives
+- **Conversation flow** — Guided input with edge case handling
+- **Cost-aware recommendations** — Free tier limits and scaling warnings
+- **Collaboration triggers** — Delegation to security, CI/CD, API design skills
+
+---
+
+## Compatibility
+
+- [OpenCode](https://opencode.ai) — Full native support
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) — Full support
+- [Codex](https://github.com/openai/codex) — Full support
+- [Cursor](https://cursor.sh) — Full support
+- [Gemini CLI](https://cloud.google.com/vertex-ai/generative-ai/docs/gemini-cli) — Compatible
+- [Windsurf](https://codeium.com/windsurf) — Compatible
+
+---
+
+## Stay Updated
+
+<p>
+  <a href="https://t.me/REXXT_H4RE">
+    <img src="https://img.shields.io/badge/Telegram-@REXXT_H4RE-0088cc?style=flat-square&logo=telegram" alt="Telegram"/>
+  </a>
+  <b>Channel:</b> <code>codex_update</code> — Release notes, stack updates, project showcases
+</p>
+
+---
+
+<p align="center">
+  Built by <a href="https://github.com/stackforgeh">StackForge</a><br/>
+  <a href="https://stackforgeh.github.io">stackforgeh.github.io</a>
+</p>

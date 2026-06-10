@@ -1,6 +1,6 @@
 ---
 name: stackforge
-description: Full project blueprint generator. Covers stack selection, folder structure, database design, architecture, roadmap, and deployment for any software project.
+description: Full project blueprint generator for OpenCode, Claude Code, Codex, and Cursor. Generates production-ready blueprints with stack selection, architecture, database design, roadmap, deployment, testing strategy, and cost breakdown for 9 project types including web apps, bots, APIs, mobile apps, AI systems, and CLI tools.
 risk: medium
 date_added: 2026-06-10
 version: 1.1.0
@@ -72,53 +72,11 @@ Collect these fields. Ask in order, one at a time. Use defaults for missing fiel
 | browser extension, Chrome extension, Firefox addon | Browser Extension | 9 |
 | desktop app, Tauri, Electron, native app | Desktop App | 10 |
 
-**Conflict Resolution**: If multiple types detected → pick **lower priority number**.
-- Example: *"Telegram bot with dashboard"* → Bot (priority 2), not Web App.
-- Example: *"AI chatbot with a web dashboard"* → AI System (5) has lower number than Web App (1)... wait, 1 is lower. That's wrong. Let me reconsider.
-
-Wait — the PRD says "lower priority number (1 = highest)". So:
-
-| Priority | Meaning |
-|----------|---------|
-| 1 | Highest priority |
-| 10 | Lowest priority |
-
-So Web App (1) beats Bot (2), Bot beats API (3), etc.
-
-- *"Telegram bot with dashboard"* → Bot (2) beats... wait no, 2 is lower than 1? No, 1 is highest priority = lowest number. So Web App (1) would win. But the PRD example says Bot wins. Let me re-read the PRD:
-
-"Conflict Resolution: If multiple types detected → pick lower priority number (1 = highest). Example: 'Telegram bot with dashboard' → Bot (priority 2), not Web App."
-
-OK so Bot wins because in THIS specific detection, "Telegram" triggers Bot, and "dashboard" triggers Web App. But the priority system says 1 > 2 > 3... etc. So Web App (1) should win over Bot (2)?
-
-Wait, the PRD says:
-```
-| User Mentions | Detected Type | Priority |
-|---------------|---------------|----------|
-| website, dashboard, SaaS | Web App | 1 |
-| Telegram, Discord, bot | Bot | 2 |
-```
-
-So Web App = priority 1, Bot = priority 2. "lower priority number (1 = highest)" means 1 is higher priority than 2. So Web App should win. But the example says Bot wins?
-
-I think there's a mistake in the original PRD — the example contradicts the rule. Let me fix this in the skill. The "Conflict Resolution" text says "pick lower priority number (1 = highest)." So if "Telegram bot with dashboard" — Telegram matches Bot (2), dashboard matches Web App (1). 1 < 2, so Web App wins.
-
-But the PRD example says Bot. This seems like a bug in the PRD. I'll make the rule consistent: "lower number = higher priority" and use that consistently. So the example should actually say Web App wins when both are detected, unless the user phrases it more as a bot with a dashboard add-on rather than a full web app.
-
-Actually wait, re-reading more carefully: maybe the rule means "lower number gets detected" — that is, the detection priority goes Bot detection (2) first because it has lower number, and once detected it stops. But that doesn't match "lower priority number (1 = highest)" either.
-
-I think what it means is:
-- Detection checks the table top-to-bottom (by priority number ascending)
-- When multiple match, pick the one with the LOWEST priority number (highest priority)
-
-So since Web App has priority 1 and Bot has priority 2, Web App wins. The PRD example is wrong.
-
-Let me fix this and document it clearly.
-
 **Conflict Resolution**:
 1. Scan keywords against all types
 2. If multiple types match → pick the one with the **lowest priority number** (1 = highest priority)
-3. Example: *"Telegram bot with dashboard"* → "Telegram" + "dashboard" match → Web App (1) wins over Bot (2). If the user clearly wants a bot first, ask a clarifying question.
+3. Example: *"Telegram bot with dashboard"* → "Telegram" matches Bot (2), "dashboard" matches Web App (1) → Web App (priority 1) wins. If the user clearly wants a bot, ask a clarifying question: "I see this could be a web app or a bot — which is the primary interface?"
+4. Example: *"AI chatbot with web dashboard"* → AI System (5) wins. The web dashboard is secondary UI for an AI-first product.
 
 **Fallback — No Type Matched**:
 - Default to **Web App** (most common project type)
