@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <b>OpenCode Agent Skill — Production-Ready Project Blueprint Generator</b>
+  <b>OpenCode Agent Skill — Project Blueprint, Telegram Bot & AI Agent Builder</b>
   <br/>
   <i>Stack Selection · Architecture · Database Design · Roadmap · Deployment</i>
 </p>
