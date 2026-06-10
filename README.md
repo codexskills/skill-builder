@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <b>StackForge Agent Skill — OpenCode AI Project Blueprint Generator for Website, Telegram Bot, AI Agent & API Building</b>
+  <b>StackForge by Codex Skiller — OpenCode AI Project Blueprint Generator</b>
   <br/>
   <i>Stack Selection · Architecture · Database Design · Roadmap · Deployment</i>
 </p>
@@ -39,7 +39,7 @@
 
 ## What is StackForge?
 
-StackForge is an **AI agent skill** for OpenCode, Claude Code, Codex, and Cursor that transforms software ideas into **production-ready project blueprints**. When you say *"I want to build X"*, it generates a complete blueprint with:
+StackForge by **Codex Skiller** is an **AI agent skill** for OpenCode, Claude Code, Codex, and Cursor that transforms software ideas into **production-ready project blueprints**. When you say *"I want to build X"*, it generates a complete blueprint with:
 
 - **Tech Stack** — Curated technology choices with justifications and alternatives
 - **Folder Structure** — Copy-paste ready directory tree with annotations
@@ -207,6 +207,6 @@ Builds: website builder, web app builder, SaaS builder, dashboard builder, landi
 ---
 
 <p align="center">
-  Built by <a href="https://github.com/stackforgeh">StackForge</a><br/>
-  <a href="https://stackforgeh.github.io">stackforgeh.github.io</a>
+  Built by <a href="https://github.com/stackforgeh">Codex Skiller</a><br/>
+  <a href="https://stackforgeh.github.io">stackforgeh.github.io</a> &middot; <a href="https://t.me/REXXT_H4RE">@REXXT_H4RE</a>
 </p>

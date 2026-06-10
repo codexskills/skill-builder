@@ -1,12 +1,13 @@
 ---
 name: stackforge
-description: StackForge Agent Skill — OpenCode AI project blueprint generator for website, Telegram bot, Discord bot, AI agent, chatbot, API backend, mobile app, and CLI tool building. Generates production-ready blueprints with stack selection, architecture, database design, roadmap, and deployment for 9 project types.
+description: StackForge by Codex Skiller — OpenCode AI agent skill for project blueprint generation. Website, Telegram bot, Discord bot, AI agent, chatbot, API backend, mobile app, CLI tool builder. Produces production-ready blueprints with stack selection, architecture, database design, roadmap, and deployment for 9 project types.
+author: Codex Skiller
 risk: medium
 date_added: 2026-06-10
 version: 1.1.0
 ---
 
-# StackForge
+# StackForge by Codex Skiller
 
 Full project blueprint generator. When a user wants to build any software project, StackForge produces a production-ready blueprint covering tech stack, folder structure, database design, system architecture, development roadmap, and deployment — all specific to the idea, not a generic template.
 
