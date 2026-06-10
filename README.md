@@ -9,16 +9,16 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/stackforgeh/stackforge/stargazers">
-    <img src="https://img.shields.io/github/stars/stackforgeh/stackforge?style=flat-square&logo=github&color=00ff88" alt="Stars"/>
+  <a href="https://github.com/codexskills/skill-builder/stargazers">
+    <img src="https://img.shields.io/github/stars/codexskills/skill-builder?style=flat-square&logo=github&color=00ff88" alt="Stars"/>
   </a>
-  <a href="https://github.com/stackforgeh/stackforge/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/stackforgeh/stackforge?style=flat-square&color=00ff88" alt="License"/>
+  <a href="https://github.com/codexskills/skill-builder/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/codexskills/skill-builder?style=flat-square&color=00ff88" alt="License"/>
   </a>
-  <a href="https://github.com/stackforgeh/stackforge/releases">
-    <img src="https://img.shields.io/github/v/release/stackforgeh/stackforge?style=flat-square&logo=git&color=00dd75" alt="Version"/>
+  <a href="https://github.com/codexskills/skill-builder/releases">
+    <img src="https://img.shields.io/github/v/release/codexskills/skill-builder?style=flat-square&logo=git&color=00dd75" alt="Version"/>
   </a>
-  <a href="https://github.com/stackforgeh">
+  <a href="https://github.com/codexskills">
     <img src="https://img.shields.io/badge/AI-Agent_Skill-00ff88?style=flat-square&logo=openai" alt="Agent Skill"/>
   </a>
   <a href="https://opencode.ai/docs/skills/">
@@ -31,7 +31,7 @@
   <a href="#usage">Usage</a> ·
   <a href="#project-types">Project Types</a> ·
   <a href="#whats-new">Changelog</a> ·
-  <a href="https://stackforgeh.github.io">Portfolio</a> ·
+  <a href="https://codexskills.github.io">Portfolio</a> ·
   <a href="https://t.me/REXXT_H4RE">Telegram</a>
 </p>
 
@@ -71,14 +71,14 @@ StackForge by **Codex Skiller** is an **AI agent skill** for OpenCode, Claude Co
 
 ```bash
 # OpenCode / Claude Code / Codex
-curl -sSL https://raw.githubusercontent.com/stackforgeh/stackforge/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/codexskills/skill-builder/main/install.sh | bash
 ```
 
 ### Manual Install
 
 ```bash
 # Clone the repo
-git clone https://github.com/stackforgeh/skill-builder.git
+git clone https://github.com/codexskills/skill-builder.git
 cd skill-builder
 
 # Copy to OpenCode global skills
@@ -207,6 +207,6 @@ Builds: website builder, web app builder, SaaS builder, dashboard builder, landi
 ---
 
 <p align="center">
-  Built by <a href="https://github.com/stackforgeh">Codex Skiller</a><br/>
-  <a href="https://stackforgeh.github.io">stackforgeh.github.io</a> &middot; <a href="https://t.me/REXXT_H4RE">@REXXT_H4RE</a>
+  Built by <a href="https://github.com/codexskills">Codex Skiller</a><br/>
+  <a href="https://codexskills.github.io">codexskills.github.io</a> &middot; <a href="https://t.me/REXXT_H4RE">@REXXT_H4RE</a>
 </p>

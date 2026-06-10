@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="https://github.com/stackforgeh/skill-builder.git"
+REPO="https://github.com/codexskills/skill-builder.git"
 SKILL_DIR="stackforge"
 DEST="${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills/stackforge"
 
